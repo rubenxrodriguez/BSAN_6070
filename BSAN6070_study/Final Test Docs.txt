@@ -1,0 +1,119 @@
+1. k-Nearest Neighbors (kNN)
+Distance Metrics Matter: Euclidean for numeric, Cosine for text, Ball Tree for high-dim data
+
+Critical Choices:
+
+Small k → overfitting (noise-sensitive), Large k → oversmoothing
+
+Always scale features (StandardScaler/MinMaxScaler)
+
+Advanced Uses: Recommendation systems, missing value imputation
+
+Key Limitation: Computationally expensive for large datasets
+
+2. Clustering Algorithms
+Hierarchical Clustering:
+
+Single-link (chain-prone) vs Complete-link (compact clusters)
+
+Ward's method minimizes variance increase
+
+k-Means:
+
+Requires predefined k (use Elbow Method/Silhouette)
+
+Sensitive to outliers and initialization
+
+Critical Insight: Clustering is exploratory - no single "correct" solution
+
+3. Neural Network Fundamentals
+Core Concept: Stacked weighted transformations + nonlinear activations
+
+Training: Backpropagation + SGD/Adam optimizers
+
+Architecture Choices:
+
+FF-ANN: Basic feedforward
+
+RNN/LSTM: For sequential data
+
+CNN: For spatial data (images)
+
+Key Strength: Automatic feature engineering
+
+4. RNNs/LSTMs
+RNN Limitation: Vanishing gradients in long sequences
+
+LSTM Solution: Gating mechanisms (forget/input/output) control memory flow
+
+Business Uses: Time-series forecasting, NLP tasks
+
+5. Transformers & BERT
+Self-Attention: Processes all positions in parallel (vs RNN sequential)
+
+BERT Specialties:
+
+Bidirectional context
+
+Masked Language Modeling pretraining
+
+Fine-Tuning: Add task-specific head to pretrained model
+
+6. LLMs (GPT, LLaMA, PaLM)
+Autoregressive Generation: Predict next token iteratively
+
+Prompt Engineering:
+
+Zero-shot vs Few-shot vs Chain-of-Thought
+
+Hyperparameters:
+
+Temperature (creativity control)
+
+Top-k/p (output diversity)
+
+7. GANs
+Adversarial Training: Generator vs Discriminator duel
+
+Applications: Synthetic data generation, image augmentation
+
+8. RAG (Retrieval-Augmented Generation)
+Hybrid Approach: Combines retrieval (vector DB) with LLM generation
+
+Business Value:
+
+Keeps responses grounded in up-to-date knowledge
+
+More efficient than constant fine-tuning
+
+Universal Themes
+Algorithm-Data Fit:
+
+kNN for small, clean datasets
+
+NN/Transformers for complex patterns
+
+Tradeoffs:
+
+Bias-variance (k in kNN)
+
+Interpretability vs performance (DT vs NN)
+
+Preprocessing Importance:
+
+Scaling for distance-based methods
+
+Tokenization for NLP
+
+Most Test-Worthy Insights
+kNN: Distance metric choice impacts results more than k value
+
+Clustering: Silhouette > Elbow Method for non-globular clusters
+
+LSTM: Forget gate enables long-term memory
+
+BERT: MLM pretraining enables few-shot learning
+
+LLMs: Temperature controls creativity, top-k/p controls focus
+
+These represent the highest-yield concepts likely to appear on an exam, balancing theoretical foundations with practical implementation knowledge.
